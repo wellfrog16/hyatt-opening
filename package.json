@@ -1,7 +1,7 @@
 {
-    "name": "template-gulp",
-    "version": "3.0.0",
-    "description": "模板文件",
+    "name": "hyatt-opening",
+    "version": "1.0.0",
+    "description": "北京望京凯悦酒店开业H5",
     "main": "app.js",
     "scripts": {
         "dev": "gulp dev",
@@ -9,14 +9,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/wellfrog16/template-gulp.git"
+        "url": "git+https://github.com/wellfrog16/hyatt-opening.git"
     },
     "author": "wellfrog",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/wellfrog16/template-gulp/issues"
+        "url": "https://github.com/wellfrog16/hyatt-opening/issues"
     },
-    "homepage": "https://github.com/wellfrog16/template-gulp#readme",
+    "homepage": "https://github.com/wellfrog16/hyatt-opening#readme",
     "devDependencies": {
         "babel-core": "^6.26.0",
         "babel-eslint": "^8.2.2",

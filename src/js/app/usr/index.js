@@ -2,9 +2,10 @@
 
 define([
     'text!../components/usr/index.html!strip',
+    'swiper',
     'helper/rivers',
     'utils/sword'],
-(htmlBlock) => {
+(htmlBlock, Swiper) => {
     const world = myWorld;
     const river = {};
 
@@ -13,7 +14,17 @@ define([
         if (!this.$root) {
             world.root.append(htmlBlock);
             this.$root = world.root.find('.usr-index');
+
+            this.bind();
         }
+    };
+
+    river.bind = function() {
+        const mySwiper = new Swiper('.swiper-container', {
+            slidesPerView: 'auto',
+            direction: 'vertical'
+        });
+        console.log(mySwiper);
     };
 
     river.show = () => {

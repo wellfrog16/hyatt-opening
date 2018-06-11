@@ -15,12 +15,12 @@ define([
 
     let anim = null;
 
-    // let callback = null;
+    let callback = null;
     // let movie = null;
 
     // 挂载
     laker.mount = function(cb) {
-        // callback = cb;
+        callback = cb;
         // 如果小于ie9，则取消loading（createjs不支持）;
         if ($.browser.msie && $.browser.version < 9) {
             return cb();
@@ -89,6 +89,7 @@ define([
             anim.destroy();
             this.destroy();
             // anim.stop();
+            callback();
         });
 
         loader.onProgress.add(loader => {
