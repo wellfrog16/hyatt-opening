@@ -13,7 +13,7 @@ define([
     const world = myWorld;
     const laker = {};
 
-    let anim = null;
+    // let anim = null;
 
     let callback = null;
     // let movie = null;
@@ -38,40 +38,40 @@ define([
         }
 
         loader.load(() => {
-            console.log('加载完成，播放逐帧动画');
+            // console.log('加载完成，播放逐帧动画');
             world.root.append(htmlLoader);
             this.$root = world.root.find('.sys-loader');
 
-            let imgSource = [];
+            // let imgSource = [];
 
-            for (let i = 1; i <= 66; i++) {
-                let zero = '';
-                for (let j = 0; j < 2 - i.toString().length; j++) {
-                    zero += '0';
-                }
+            // for (let i = 1; i <= 66; i++) {
+            //     let zero = '';
+            //     for (let j = 0; j < 2 - i.toString().length; j++) {
+            //         zero += '0';
+            //     }
 
-                imgSource.push(`assets/img/common/loader/sprite/${zero + i}.jpg`);
-            }
+            //     imgSource.push(`assets/img/common/loader/sprite/${zero + i}.jpg`);
+            // }
 
-            anim = spriteplayer({
-                target: $('.movie'),
-                source: imgSource
-            });
+            // anim = spriteplayer({
+            //     target: $('.movie'),
+            //     source: imgSource
+            // });
 
-            // anim.loop = false;
-            anim.cursor = 'pointer';
-            // anim.scale = new PIXI.Point(0.1, 0.1);
-            anim.animationSpeed = 0.12;
-            anim.onLoop = function() {
-                console.log('循环');
-            };
-            anim.onComplete = function() {
-                console.log('finished');
-            };
-            anim.onFrameChange = function() {
-                console.log(anim.currentFrame);
-            };
-            anim.play();
+            // // anim.loop = false;
+            // anim.cursor = 'pointer';
+            // // anim.scale = new PIXI.Point(0.1, 0.1);
+            // anim.animationSpeed = 0.12;
+            // anim.onLoop = function() {
+            //     console.log('循环');
+            // };
+            // anim.onComplete = function() {
+            //     console.log('finished');
+            // };
+            // anim.onFrameChange = function() {
+            //     console.log(anim.currentFrame);
+            // };
+            // anim.play();
             this.mainload();
         });
     };
@@ -80,13 +80,13 @@ define([
     laker.mainload = function() {
         const loader = new PIXI.loaders.Loader('assets/img/');
 
-        for (const item of source.preload) {
+        for (const item of source.mainload) {
             loader.add(item.src);
         }
 
         loader.load((loader, resources) => {
-            console.log('加载完成');
-            anim.destroy();
+            // console.log('加载完成');
+            // anim.destroy();
             this.destroy();
             // anim.stop();
             callback();

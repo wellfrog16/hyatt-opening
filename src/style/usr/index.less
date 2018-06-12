@@ -1,13 +1,205 @@
+@import '../config.less';
+
 .usr-index {
     .swiper-container {
         height: 100vh;
     }
 
     .swiper-slide {
-        height: 100%;
+        height: 100vh;
     }
 
     .scene1 {
-        height: 300px;
+        @url-local: '../assets/img/main/scene1/photo.jpg';
+
+        height: image-height(@url-local);
+
+        > div {
+            position: absolute;
+        }
+
+        .photo {
+            @url: '@{g-baseUrl}/assets/img/main/scene1/photo.jpg';
+            @url-local: '../assets/img/main/scene1/photo.jpg';
+
+            width: 100%;
+            height: image-height(@url-local);
+            background-image: url(@url);
+            background-size: contain;
+            background-repeat: no-repeat;
+            top: 0;
+        }
+
+        .text-box {
+            width: 100%;
+            top: 243px;
+        }
+
+        .text {
+            @url: '@{g-baseUrl}/assets/img/main/scene1/text.png';
+            @url-local: '../assets/img/main/scene1/text.png';
+
+            width: image-width(@url-local);
+            height: image-height(@url-local);
+            background-image: url(@url);
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin: 0 auto;
+        }
+
+        .logo {
+            @url: '@{g-baseUrl}/assets/img/main/scene1/logo.png';
+            @url-local: '../assets/img/main/scene1/logo.png';
+
+            width: image-width(@url-local);
+            height: image-height(@url-local);
+            background-image: url(@url);
+            background-size: contain;
+            background-repeat: no-repeat;
+            top: 233px;
+            left: 90px;
+        }
+    }
+
+    .scene2 {
+        @url: '@{g-baseUrl}/assets/img/main/scene2/bg.jpg';
+        @url-local: '../assets/img/main/scene2/bg.jpg';
+
+        background-image: url(@url-local);
+        background-size: 100% auto;
+        background-position: bottom;
+
+        .photo {
+            @url: '@{g-baseUrl}/assets/img/main/scene2/photo.jpg';
+            @url-local: '../assets/img/main/scene2/photo.jpg';
+
+            width: 100%;
+            height: image-height(@url-local);
+            background-image: url(@url);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .text {
+            @url: '@{g-baseUrl}/assets/img/main/scene2/text.png';
+            @url-local: '../assets/img/main/scene2/text.png';
+
+            width: image-width(@url-local);
+            height: image-height(@url-local);
+            background-image: url(@url);
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin: 68px auto 0 auto;
+        }
+    }
+
+    .scene3 {
+        @url: '@{g-baseUrl}/assets/img/main/scene3/bg.jpg';
+        @url-local: '../assets/img/main/scene3/bg.jpg';
+
+        background-image: url(@url-local);
+        background-size: 100% auto;
+        background-position: bottom;
+
+        .photo {
+            @url: '@{g-baseUrl}/assets/img/main/scene3/photo.jpg';
+            @url-local: '../assets/img/main/scene3/photo.jpg';
+
+            width: 100%;
+            height: image-height(@url-local);
+            background-image: url(@url);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .text {
+            @url: '@{g-baseUrl}/assets/img/main/scene3/text.png';
+            @url-local: '../assets/img/main/scene3/text.png';
+
+            width: image-width(@url-local);
+            height: image-height(@url-local);
+            background-image: url(@url);
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin: 68px auto 0 auto;
+        }
+    }
+
+    .scene4 {
+        @url: '@{g-baseUrl}/assets/img/main/scene4/bg.jpg';
+        @url-local: '../assets/img/main/scene4/bg.jpg';
+
+        background-image: url(@url-local);
+        background-size: 100% auto;
+        background-position: bottom;
+
+        .photo {
+            @url: '@{g-baseUrl}/assets/img/main/scene4/photo.jpg';
+            @url-local: '../assets/img/main/scene4/photo.jpg';
+
+            width: 100%;
+            height: image-height(@url-local);
+            background-image: url(@url);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .text {
+            @url: '@{g-baseUrl}/assets/img/main/scene4/text.png';
+            @url-local: '../assets/img/main/scene4/text.png';
+
+            width: image-width(@url-local);
+            height: image-height(@url-local);
+            background-image: url(@url);
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin: 58px auto 0 auto;
+        }
+
+        .button {
+            position: absolute;
+            top: 725px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .scene5 {
+        @url: '@{g-baseUrl}/assets/img/main/scene5/bg.jpg';
+        @url-local: '../assets/img/main/scene5/bg.jpg';
+
+        background-image: url(@url-local);
+        background-size: 100% auto;
+        background-position: bottom;
+
+        .photo {
+            @url: '@{g-baseUrl}/assets/img/main/scene5/photo.jpg';
+            @url-local: '../assets/img/main/scene5/photo.jpg';
+
+            width: 100%;
+            height: image-height(@url-local);
+            background-image: url(@url);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .text {
+            @url: '@{g-baseUrl}/assets/img/main/scene5/text.png';
+            @url-local: '../assets/img/main/scene5/text.png';
+
+            width: image-width(@url-local);
+            height: image-height(@url-local);
+            background-image: url(@url);
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin: 58px auto 0 auto;
+        }
+
+        .button {
+            position: absolute;
+            top: 733px;
+            width: 100%;
+            text-align: center;
+        }
     }
 }

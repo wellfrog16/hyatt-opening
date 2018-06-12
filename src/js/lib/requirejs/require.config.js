@@ -38,6 +38,7 @@
         // 'jquery.scrollTo': 'lib/jquery/jquery.scrollTo',
 
         'swiper': 'lib/swiper/swiper-4.2.0.min',
+        'swiperAnimate': 'lib/swiper/swiper.animate1.0.3.min',
 
         // 'bootstrap': 'lib/bootstrap/bootstrap-3.3.7.min',
 
@@ -73,7 +74,7 @@
     shim: {
         // 'bootstrap': ['jquery'],
         // // 'bootstrap' : ['css!./lib/bootstrap/bootstrap-3.3.7.min.css'],
-        'swiper': ['jquery'],
+        'swiper': ['jquery', 'swiperAnimate'],
         // 'jquery.fullPage': ['jquery', 'css!./lib/jquery/jquery.fullPage.css'],
         // 'jquery.cookie': ['jquery']
         // test: {

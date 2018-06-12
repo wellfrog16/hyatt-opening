@@ -14,7 +14,9 @@ module.exports = {
   },
   globals: {
     myWorld: true,
-    wx: true
+    wx: true,
+    swiperAnimateCache: true,
+    swiperAnimate: true
   },
   // https://github.com/standard/standard/blob/master/docs/RULES-en.md
   extends: 'standard',

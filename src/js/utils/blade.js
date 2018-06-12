@@ -1,8 +1,8 @@
 define(['jquery', 'jquery.hammer'], ($) => {
     const self = {};
 
-    self.share = () => {
-        var host = 'http://test.tron-m.com/philips/saomang';
+    self.share = (title, desc) => {
+        var host = 'http://test.tron-m.com/hyatt/opening';
 
         $.ajax({
             type: 'post',
@@ -24,9 +24,7 @@ define(['jquery', 'jquery.hammer'], ($) => {
 
                 wx.ready(function() {
                     var url = document.location.href;
-                    var title = '飞利浦 - 扫盲研究所';
-                    var desc = '飞利浦 - 扫盲研究所';
-                    var imgUrl = host + '/assets/img/main/bg.jpg';
+                    var imgUrl = host + '/assets/img/share.jpg';
 
                     wx.onMenuShareTimeline({
                         title: title, // 分享标题
