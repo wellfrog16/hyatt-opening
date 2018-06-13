@@ -7,7 +7,7 @@
     width: 100%;
     height: image-height(@url-local);
     background-image: url(@url);
-    background-size: contain;
+    background-size: 100% auto;
     background-repeat: no-repeat;
     top: 0;
 }
@@ -27,7 +27,7 @@
         width: 100%;
         height: image-height(@url-local);
         background-image: url(@url);
-        background-size: contain;
+        background-size: 100% auto;
         background-repeat: no-repeat;
         top: 0;
     }
@@ -39,7 +39,7 @@
         width: image-width(@url-local);
         height: image-height(@url-local);
         background-image: url(@url);
-        background-size: contain;
+        background-size: 100% auto;
         background-repeat: no-repeat;
         margin: 0 auto;
     }
@@ -165,7 +165,7 @@
                 width: image-width(@url-local);
                 height: image-height(@url-local);
                 background-image: url(@url);
-                background-size: contain;
+                background-size: 100% auto;
                 background-repeat: no-repeat;
                 margin: 0 auto;
             }
@@ -177,7 +177,7 @@
                 width: image-width(@url-local);
                 height: image-height(@url-local);
                 background-image: url(@url);
-                background-size: contain;
+                background-size: 100% auto;
                 background-repeat: no-repeat;
                 top: 273px;
                 left: 105px;
@@ -197,9 +197,10 @@
 
             .button {
                 position: absolute;
-                top: 1059px;
+                top: 1015px;
                 width: 100%;
                 text-align: center;
+                transform: scale(1.2);
             }
         }
 
@@ -208,9 +209,10 @@
 
             .button {
                 position: absolute;
-                top: 1059px;
+                top: 1008px;
                 width: 100%;
                 text-align: center;
+                transform: scale(1.2);
             }
         }
     }
