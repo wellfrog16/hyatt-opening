@@ -1,5 +1,50 @@
 @import '../config.less';
 
+.photo(@folder, @scene) {
+    @url: '@{g-baseUrl}/assets/img/@{folder}/@{scene}/photo.jpg';
+    @url-local: '../assets/img/@{folder}/@{scene}/photo.jpg';
+
+    width: 100%;
+    height: image-height(@url-local);
+    background-image: url(@url);
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 0;
+}
+
+.scene(@folder, @scene) {
+    @url: '@{g-baseUrl}/assets/img/@{folder}/@{scene}/bg.jpg';
+    @url-local: '../assets/img/@{folder}/@{scene}/bg.jpg';
+
+    background-image: url(@url-local);
+    background-size: 100% auto;
+    background-position: bottom;
+
+    .photo {
+        @url: '@{g-baseUrl}/assets/img/@{folder}/@{scene}/photo.jpg';
+        @url-local: '../assets/img/@{folder}/@{scene}/photo.jpg';
+
+        width: 100%;
+        height: image-height(@url-local);
+        background-image: url(@url);
+        background-size: contain;
+        background-repeat: no-repeat;
+        top: 0;
+    }
+
+    .text {
+        @url: '@{g-baseUrl}/assets/img/@{folder}/@{scene}/text.png';
+        @url-local: '../assets/img/@{folder}/@{scene}/text.png';
+
+        width: image-width(@url-local);
+        height: image-height(@url-local);
+        background-image: url(@url);
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+    }
+}
+
 .usr-index {
     .swiper-container {
         height: 100vh;
@@ -22,51 +67,6 @@
         }
     }
 
-    .photo(@scene) {
-        @url: '@{g-baseUrl}/assets/img/main/@{scene}/photo.jpg';
-        @url-local: '../assets/img/main/@{scene}/photo.jpg';
-
-        width: 100%;
-        height: image-height(@url-local);
-        background-image: url(@url);
-        background-size: contain;
-        background-repeat: no-repeat;
-        top: 0;
-    }
-
-    .scene(@scene) {
-        @url: '@{g-baseUrl}/assets/img/main/@{scene}/bg.jpg';
-        @url-local: '../assets/img/main/@{scene}/bg.jpg';
-
-        background-image: url(@url-local);
-        background-size: 100% auto;
-        background-position: bottom;
-
-        .photo {
-            @url: '@{g-baseUrl}/assets/img/main/@{scene}/photo.jpg';
-            @url-local: '../assets/img/main/@{scene}/photo.jpg';
-
-            width: 100%;
-            height: image-height(@url-local);
-            background-image: url(@url);
-            background-size: contain;
-            background-repeat: no-repeat;
-            top: 0;
-        }
-
-        .text {
-            @url: '@{g-baseUrl}/assets/img/main/@{scene}/text.png';
-            @url-local: '../assets/img/main/@{scene}/text.png';
-
-            width: image-width(@url-local);
-            height: image-height(@url-local);
-            background-image: url(@url);
-            background-size: contain;
-            background-repeat: no-repeat;
-            margin: 0 auto;
-        }
-    }
-
     .scene1 {
         @url-local: '../assets/img/main/scene1/photo.jpg';
 
@@ -76,11 +76,11 @@
             position: absolute;
         }
 
-        .photo { .photo('scene1'); }
+        .photo { .photo('main', 'scene1'); }
 
         .open-box {
             width: 100%;
-            top: 243px;
+            top: 285px;
         }
 
         .text {
@@ -104,38 +104,114 @@
             background-image: url(@url);
             background-size: contain;
             background-repeat: no-repeat;
-            top: 233px;
-            left: 90px;
+            top: 273px;
+            left: 105px;
         }
     }
 
     .scene2 {
-        .scene('scene2');
+        .scene('main', 'scene2');
     }
 
     .scene3 {
-        .scene('scene3');
+        .scene('main', 'scene3');
     }
 
     .scene4 {
-        .scene('scene4');
+        .scene('main', 'scene4');
 
         .button {
             position: absolute;
-            top: 707px;
+            top: 828px;
             width: 100%;
             text-align: center;
         }
     }
 
     .scene5 {
-        .scene('scene5');
+        .scene('main', 'scene5');
 
         .button {
             position: absolute;
-            top: 709px;
+            top: 830px;
             width: 100%;
             text-align: center;
+        }
+    }
+}
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+    .usr-index {
+        .scene1 {
+            @url-local: '../assets/img/x/scene1/photo.jpg';
+
+            height: image-height(@url-local);
+
+            > div {
+                position: absolute;
+            }
+
+            .photo { .photo('x', 'scene1'); }
+
+            .open-box {
+                width: 100%;
+                top: 285px;
+            }
+
+            .text {
+                @url: '@{g-baseUrl}/assets/img/x/scene1/text.png';
+                @url-local: '../assets/img/x/scene1/text.png';
+
+                width: image-width(@url-local);
+                height: image-height(@url-local);
+                background-image: url(@url);
+                background-size: contain;
+                background-repeat: no-repeat;
+                margin: 0 auto;
+            }
+
+            .logo {
+                @url: '@{g-baseUrl}/assets/img/x/scene1/logo.png';
+                @url-local: '../assets/img/x/scene1/logo.png';
+
+                width: image-width(@url-local);
+                height: image-height(@url-local);
+                background-image: url(@url);
+                background-size: contain;
+                background-repeat: no-repeat;
+                top: 273px;
+                left: 105px;
+            }
+        }
+
+        .scene2 {
+            .scene('x', 'scene2');
+        }
+
+        .scene3 {
+            .scene('x', 'scene3');
+        }
+
+        .scene4 {
+            .scene('x', 'scene4');
+
+            .button {
+                position: absolute;
+                top: 1059px;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .scene5 {
+            .scene('x', 'scene5');
+
+            .button {
+                position: absolute;
+                top: 1059px;
+                width: 100%;
+                text-align: center;
+            }
         }
     }
 }

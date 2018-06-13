@@ -2,7 +2,7 @@ define(['jquery', 'jquery.hammer'], ($) => {
     const self = {};
 
     self.share = (title, desc) => {
-        var host = 'http://test.tron-m.com/hyatt/opening';
+        var host = 'http://www.tron-m.com/hyatt/opening';
 
         $.ajax({
             type: 'post',

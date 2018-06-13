@@ -80,8 +80,14 @@ define([
     laker.mainload = function() {
         const loader = new PIXI.loaders.Loader('assets/img/');
 
-        for (const item of source.mainload) {
-            loader.add(item.src);
+        if ($(window).height() > 750) {
+            for (const item of source.xload) {
+                loader.add(item.src);
+            }
+        } else {
+            for (const item of source.mainload) {
+                loader.add(item.src);
+            }
         }
 
         loader.load((loader, resources) => {

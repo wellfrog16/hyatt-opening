@@ -19,7 +19,7 @@ define([
         // 自动修正rem
         sword.fixRem();
 
-        world.blade.share('北京望京凯悦酒店美食鉴赏之旅', '唯在凯悦，其味无穷');
+        world.blade.share('悦享自然，从心之旅', '2018.6.15 | 北京望京凯悦酒店 初见');
 
         // 如果是手机端，加载横屏提示
         if (!sword.isPC) { world.lakers.$block.mount(); }

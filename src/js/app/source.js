@@ -36,4 +36,26 @@ resources.mainload = [
     { 'src': 'main/scene5/text.png' }
 ];
 
+resources.xload = [
+    { 'src': 'x/scene1/logo.png' },
+    { 'src': 'x/scene1/photo.jpg' },
+    { 'src': 'x/scene1/text.png' },
+
+    { 'src': 'x/scene2/bg.jpg' },
+    { 'src': 'x/scene2/photo.jpg' },
+    { 'src': 'x/scene2/text.png' },
+
+    { 'src': 'x/scene3/bg.jpg' },
+    { 'src': 'x/scene3/photo.jpg' },
+    { 'src': 'x/scene3/text.png' },
+
+    { 'src': 'x/scene4/bg.jpg' },
+    { 'src': 'x/scene4/photo.jpg' },
+    { 'src': 'x/scene4/text.png' },
+
+    { 'src': 'x/scene5/bg.jpg' },
+    { 'src': 'x/scene5/photo.jpg' },
+    { 'src': 'x/scene5/text.png' }
+];
+
 define(resources);

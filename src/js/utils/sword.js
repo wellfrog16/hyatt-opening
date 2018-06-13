@@ -81,8 +81,8 @@ define(['jquery'], ($) => {
         var tid;
 
         // 下面的640表示设计稿大小，50(px)是rem基数
-        designWidth = designWidth || 640;
-        radix = radix || 64;
+        designWidth = designWidth || 750;
+        radix = radix || 75;
 
         function refreshRem() {
             // 获取当前窗口的宽度
