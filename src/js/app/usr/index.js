@@ -46,7 +46,7 @@ define([
         });
 
         this.$root.find('.scene5 .button i').hammer().on('tap', () => {
-            location.href = 'http://zd.zhiketong.cn/r_ticket_poster?id=84826&source=eb&appid=wx78eb159eda1fe3ef&user_id=173898&product_grouptype=0';
+            location.href = 'http://zd.zhiketong.cn/r_ticket_poster?id=87823&source=eb&appid=wx78eb159eda1fe3ef&user_id=125542&product_grouptype=0';
         });
     };
 
